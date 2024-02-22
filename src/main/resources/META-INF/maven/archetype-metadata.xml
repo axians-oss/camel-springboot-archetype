@@ -1,0 +1,22 @@
+<archetype-descriptor
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        name="camel-springboot-archetype">
+    <requiredProperties>
+        <requiredProperty key="package" />
+        <requiredProperty key="configPrefix" />
+    </requiredProperties>
+    <fileSets>
+        <fileSet filtered="true">
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
