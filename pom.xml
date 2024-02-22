@@ -4,13 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>nl.axians.maven-archetype</groupId>
+    <groupId>nl.axians.maven.archetype</groupId>
     <artifactId>camel-springboot-archetype</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
     <properties>
+        <!-- Default encoding settings -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- Default compiler settings -->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.release>11</maven.compiler.release>
+
         <archetype-packaging.version>3.2.0</archetype-packaging.version>
+        <archetype.test.skip>true</archetype.test.skip>
     </properties>
 
     <build>
