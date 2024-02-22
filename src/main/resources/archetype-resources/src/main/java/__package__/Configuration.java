@@ -8,7 +8,7 @@ import org.springframework.validation.annotation.Validated;
 
 /**
  * Configuration class to hold the module specific configuration properties. The properties are read from the
- * application.properties file and start with the prefix "${configPrefix}".
+ * application.YAML file and start with the prefix "${configPrefix}".
  */
 @Data
 @Component
