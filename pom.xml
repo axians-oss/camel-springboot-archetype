@@ -4,7 +4,7 @@
 
     <groupId>nl.axians.maven.archetype</groupId>
     <artifactId>camel-springboot-archetype</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>maven-archetype</packaging>
 
     <properties>
@@ -34,7 +34,8 @@
         <connection>scm:https://github.com/axians-oss/camel-springboot-archetype.git</connection>
         <developerConnection>scm:git:https://github.com/axians-oss/camel-springboot-archetype.git</developerConnection>
         <url>https://github.com/axians-oss/camel-springboot-archetype</url>
-    </scm>
+      <tag>1.0.0</tag>
+  </scm>
 
     <profiles>
         <profile>
