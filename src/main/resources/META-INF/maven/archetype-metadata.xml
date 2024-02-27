@@ -2,20 +2,31 @@
         xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
         name="camel-springboot-archetype">
     <requiredProperties>
-        <requiredProperty key="package" />
         <requiredProperty key="configPrefix" />
     </requiredProperties>
     <fileSets>
-        <fileSet filtered="true">
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
             <directory>src/main/java</directory>
             <includes>
-                <include>**/*.*</include>
+                <include>**/*</include>
             </includes>
         </fileSet>
-        <fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
             <directory>src/main/resources</directory>
             <includes>
-                <include>**/*.*</include>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>src/test/java</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/test/resources</directory>
+            <includes>
+                <include>**/*</include>
             </includes>
         </fileSet>
     </fileSets>

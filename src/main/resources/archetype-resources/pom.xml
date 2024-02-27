@@ -8,16 +8,17 @@
         <groupId>nl.axians</groupId>
         <artifactId>axians-parent</artifactId>
         <version>1-SNAPSHOT</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
-    <groupId>${groupId}/groupId>
+    <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <camel.version>4.4.0</camel.version>
         <spring-boot.version>3.2.2</spring-boot.version>
+        <loki-logback-appender.version>1.4.2</loki-logback-appender.version>
 
         <!-- CVE fixes -->
         <json-path.version>2.9.0</json-path.version>
@@ -41,6 +42,25 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- Micrometer -->
+            <dependency>
+                <groupId>io.micrometer</groupId>
+                <artifactId>micrometer-tracing</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>io.micrometer</groupId>
+                <artifactId>micrometer-tracing-bridge-otel</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>io.micrometer</groupId>
+                <artifactId>micrometer-registry-prometheus</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>com.github.loki4j</groupId>
+                <artifactId>loki-logback-appender</artifactId>
+                <version>${loki-logback-appender.version}</version>
             </dependency>
 
             <!-- CVE fixes -->
@@ -97,6 +117,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
                 <executions>
                     <execution>
                         <goals>
