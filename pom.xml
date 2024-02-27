@@ -29,6 +29,12 @@
         <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
     </properties>
 
+    <scm>
+        <connection>scm:https://github.com/axians-oss/camel-springboot-archetype.git</connection>
+        <developerConnection>scm:git:https://github.com/axians-oss/camel-springboot-archetype.git</developerConnection>
+        <url>https://github.com/axians-oss/camel-springboot-archetype</url>
+    </scm>
+
     <profiles>
         <profile>
             <id>public-release</id>
@@ -125,9 +131,6 @@
                 <version>${maven-release-plugin.version}</version>
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <useReleaseProfile>false</useReleaseProfile>
-                    <releaseProfiles>public-release</releaseProfiles>
-                    <goals>deploy</goals>
                 </configuration>
             </plugin>
         </plugins>
