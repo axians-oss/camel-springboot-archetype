@@ -6,8 +6,8 @@
 
     <parent>
         <groupId>nl.axians</groupId>
-        <artifactId>axians-parent</artifactId>
-        <version>1-SNAPSHOT</version>
+        <artifactId>axians-camel-spring-boot</artifactId>
+        <version>2</version>
         <relativePath/>
     </parent>
 
@@ -16,59 +16,10 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
-        <camel.version>4.4.0</camel.version>
-        <spring-boot.version>3.2.2</spring-boot.version>
-        <loki-logback-appender.version>1.4.2</loki-logback-appender.version>
-
-        <!-- CVE fixes -->
-        <json-path.version>2.9.0</json-path.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- Camel -->
-            <dependency>
-                <groupId>org.apache.camel.springboot</groupId>
-                <artifactId>camel-spring-boot-bom</artifactId>
-                <version>${camel.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- Spring Boot -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- Micrometer -->
-            <dependency>
-                <groupId>io.micrometer</groupId>
-                <artifactId>micrometer-tracing</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>io.micrometer</groupId>
-                <artifactId>micrometer-tracing-bridge-otel</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>io.micrometer</groupId>
-                <artifactId>micrometer-registry-prometheus</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>com.github.loki4j</groupId>
-                <artifactId>loki-logback-appender</artifactId>
-                <version>${loki-logback-appender.version}</version>
-            </dependency>
-
-            <!-- CVE fixes -->
-            <dependency>
-                <groupId>com.jayway.jsonpath</groupId>
-                <artifactId>json-path</artifactId>
-                <version>${json-path.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
